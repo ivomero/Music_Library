@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { DisplaySong } from './DisplaySong/DisplaySong';
-import { SongForm } from './SongForm/SongForm';
+import SongForm from './SongForm/SongForm';
 
 
 class App extends Component {
@@ -12,7 +12,6 @@ class App extends Component {
 
     this.state = {
       songs: [],
-      songId: 0
     }
 
   }
@@ -35,11 +34,7 @@ class App extends Component {
     });
   }
   async createSong (newSong) {
-    let postSong= await axios.post(`http://127.0.0.1:8000/music/${id}/`);
-    this.setState({
-        songs:postSong.data,
-        songId: this.state.songs.length + 1
-    })
+    let postSong= await axios.post('http://127.0.0.1:8000/music/', newSong);
 }
   
   render(){

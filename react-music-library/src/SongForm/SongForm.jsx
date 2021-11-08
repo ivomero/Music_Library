@@ -4,7 +4,6 @@ class SongForm extends Component {
     constructor(props) {
         super(props);
         this.state = { 
-            id:'',
             title:'',
             artist:'',
             album:'',
@@ -37,9 +36,9 @@ class SongForm extends Component {
                 <label>Album</label>
                 <input name="album" onChange={this.handleChange} value={this.state.album}/>
                 <label>Genre</label>
-                <input name="author" onChange={this.handleChange} value={this.state.genre}/>
+                <input name="genre" onChange={this.handleChange} value={this.state.genre}/>
                 <label>Release Date</label>
-                <input name="author" onChange={this.handleChange} value={this.state.release_date}/>
+                <input name="release_date" onChange={this.handleChange} value={this.state.release_date}/>
                 <button type="submit">Create Song</button>
             </form>
          );
