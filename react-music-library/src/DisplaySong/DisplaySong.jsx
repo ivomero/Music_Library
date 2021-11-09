@@ -1,4 +1,5 @@
 import React from 'react';
+import './DisplaySong.css';
 
 
 export const DisplaySong = (props) => {
@@ -6,7 +7,7 @@ export const DisplaySong = (props) => {
 
     return (
        
-    <table border="1">
+    <table className="table" border="1">
       <thead>
         <th>Title</th>
         <th>Artist</th>
@@ -24,7 +25,7 @@ export const DisplaySong = (props) => {
             <td>{song.album}</td>
             <td>{song.genre}</td>
             <td>{song.release_date}</td>
-            <button onClick={()=>props.delete(song.id)} type="button">Delete Song</button>
+            <button className="button2" onClick={()=>props.delete(song.id)} type="button">Delete Song</button>
           </tr>
         ))}
       </tbody>

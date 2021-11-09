@@ -44,7 +44,7 @@ class App extends Component {
           })
           return true;
         } else {
-            return false;
+          return false;
         }
     });
   }
@@ -52,6 +52,7 @@ class App extends Component {
   render(){
     return (
       <div className="App">
+        <h1>Music Library</h1>
         <SearchBar filteredSongs= {this.filterSongs} />
         <DisplaySong songs={this.state.songs} delete = {this.deleteSong} />
         <SongForm createNewSong={this.createSong} />

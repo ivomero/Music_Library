@@ -1,0 +1,10 @@
+.button {
+  background-color: lightblue;
+  cursor: pointer;
+  border: 3px;
+}
+
+.form {
+  text-align: center;
+  padding-bottom: 20px;
+}
